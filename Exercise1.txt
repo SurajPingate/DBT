@@ -1,0 +1,71 @@
+Exercise 1
+
+
+
+create database Exercise1;
+use Exercise1;
+
+create table SEMP
+(
+	EMPNO char(4) PRIMARY KEY,
+	EMPNAME char(20),
+	BASIC float(9,2),	
+	DEPTNO char(2),
+	DEPTHEAD char(4)
+);
+
+
+
+create table SDEPT
+(
+	DEPTNO char(2) PRIMARY KEY,
+	DEPTNAME char(15)
+);
+
+insert into SDEPT values('10','Development');
+insert into SDEPT values('20','Training');
+
+
+insert into SEMP values('0001','SUNIL','6000.00','10','NULL');
+insert into SEMP values('0002','HIREN','8000.00','20','NULL');
+insert into SEMP values('0003','ALI','4000.00','10','0001');
+insert into SEMP(EMPNO,EMPNAME,BASIC,DEPTHEAD) values('0004','GEORGE','6000.00','0002');
+
+
+create table S
+(
+	`S#` char(10) PRIMARY KEY,
+	Sname varchar(30),
+	Status varchar(10),
+	City varchar(20)
+);
+
+create table P
+(
+	`P#` char(10) PRIMARY KEY,
+	Pname varchar(30),
+	Color char(10),
+	Weight float(5,2),
+	City varchar(20)
+);
+
+
+create table J
+(
+	`J#` char(10) PRIMARY KEY,
+	Jname varchar(30),
+	City varchar(20)
+);
+
+
+
+create table SPJ
+(
+	`S#` char(10),
+	`P#` char(10),
+	`J#` char(10),
+	Qty varchar(10),
+	FOREIGN KEY(`S#`) REFERENCES S(`S#`),
+	FOREIGN KEY(`P#`) REFERENCES P(`P#`),
+	FOREIGN KEY(`J#`) REFERENCES J(`J#`)
+);
