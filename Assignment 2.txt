@@ -1,0 +1,14 @@
+﻿1) Which field of the Customers table is the primary key?
+Cnum
+
+2) What is the 4th column of the Customers table?
+Ratings
+
+3) What is another word for row? For column?
+Alias for
+Row :- tupple , entity, opportunity
+Coloumn:- attribute, method
+
+4) Why isn’t it possible to see the first five rows of a table?
+
+when we insert in table whatever the system finds free space in Database server HDD it will store the row there, when we select table, the order of rows in the output depends on the rpw address when we update a row because of increasing the size of row it may moved from the earlier position hence  it is not possible to view first & last rows of table. 
