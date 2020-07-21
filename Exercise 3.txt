@@ -36,3 +36,10 @@ replaced with ‘o’.
 8. Use the soundex function to search for a supplier by the name of ‘BLOKE’.
 
 -->>select Sname from s where soundex(sname)=soundex('BLOKE');
+
+9. Display the Supplier name and the status (as Ten, Twenty, Thirty, etc.).
+
+-->> 
+10. Display the current day (e.g. Thursday).
+
+-->>select dayname(sysdate()) from dual;
